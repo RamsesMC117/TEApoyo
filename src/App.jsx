@@ -1,9 +1,12 @@
+import Header from "./components/header"
 
 function App() {
   return (
     <>
-      <div>
-        <h1>Hola mundo desde Oaxaca</h1>
+      <div className="flex flex-col">
+        <div>
+          <Header />
+        </div>
       </div>
     </>
   )
