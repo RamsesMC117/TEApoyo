@@ -1,9 +1,10 @@
+// src/components/Header.jsx
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo-definitivo-removebg-preview.png";
 import { FaHome, FaInfoCircle, FaServicestack, FaEnvelope } from "react-icons/fa";
 import { AiOutlineLogin } from "react-icons/ai";
 
-const Header = () => {
+const Header = ({ onServiciosClick }) => {
     return (
         <div className="h-full w-full bg-gray-100">
             <div className="flex flex-row items-center justify-between p-4 bg-white shadow-md">
@@ -27,11 +28,11 @@ const Header = () => {
                             </Link>
                         </li>
                         <li className="flex items-center">
-                            <Link
+                            <button
                                 className="flex items-center no-underline text-lg font-medium hover:text-blue-500"
-                                to="/servicios">
+                                onClick={onServiciosClick}>
                                 <FaServicestack className="mr-2" /> Servicios
-                            </Link>
+                            </button>
                         </li>
                         <li className="flex items-center">
                             <Link
