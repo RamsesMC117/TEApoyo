@@ -13,10 +13,18 @@ function Nosotros() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-2 text-center">
-      <img src={equipoImg} alt="Equipo" className="w-full max-w-xs md:max-w-md rounded-lg " /> {/* Ajusta el mb-4 */}
-      <h2 className="text-2xl font-bold mb-4">¿Quiénes somos?</h2>
-      <ul className="list-none flex flex-wrap justify-center space-x-6">
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
+      {/* Reduce el margen inferior del título */}
+      <h2 className="text-4xl font-extrabold text-blue-800 mb-4 text-center lg:text-left">#Orgullo Jaguar</h2>
+
+      {/* Ajusta el margen inferior de la imagen */}
+      <img src={equipoImg} alt="Equipo" className="w-full max-w-xs md:max-w-md rounded-lg mb-3" />
+
+      {/* Reduce el margen inferior de "¿Quiénes somos?" */}
+      <h2 className="text-2xl font-bold mb-2">¿Quiénes somos?</h2>
+
+      {/* Reduce el espaciado horizontal entre los integrantes */}
+      <ul className="list-none flex flex-wrap justify-center space-x-4 space-y-2">
         {integrantes.map((integrante, index) => (
           <li
             key={index}
