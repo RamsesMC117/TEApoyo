@@ -114,7 +114,7 @@ const SectionSlider = () => {
             <div className="w-full py-16 bg-gradient-to-b from-pink-500 to-gray-200 flex flex-col items-center">
                 {/* Título centrado */}
                 <h2 className="text-5xl font-bold text-center text-white mb-8">
-                    IA Centralizada
+                    IA Personalizada
                 </h2>
 
                 {/* Contenido de la sección: Card */}
