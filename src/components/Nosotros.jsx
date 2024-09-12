@@ -13,7 +13,7 @@ function Nosotros() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
+    <div className="w-full flex flex-col items-center justify-center pt-8 md:pt-5 relative">
       {/* Reduce el margen inferior del título */}
       <h2 className="text-4xl font-extrabold text-blue-800 mb-4 text-center lg:text-left">#Orgullo Jaguar</h2>
 
