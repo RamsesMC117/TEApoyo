@@ -9,7 +9,7 @@ function Nosotros() {
     { nombre: 'MiguelHC-Dev', github: 'MiguelHC-Dev' },
     { nombre: 'AliGameplays', github: 'AliGameplays' },
     { nombre: 'Mariana', github: 'Mariana' },
-    { nombre: 'Dr. Gustavo', github: 'Dr. Gustavo' },
+    { nombre: 'Dr. Gustavo', github: 'Dr. Gustavo ' },
   ];
 
   return (
