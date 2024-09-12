@@ -1,16 +1,20 @@
 // src/components/Header.jsx
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo-definitivo-removebg-preview.png";
-import { FaHome, FaInfoCircle, FaServicestack, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaInfoCircle, FaServicestack, FaAppleAlt } from "react-icons/fa";
 import { AiOutlineLogin } from "react-icons/ai";
 
 const Header = ({ onServiciosClick }) => {
     return (
         <div className="h-full w-full bg-gray-100">
             <div className="flex flex-row items-center justify-between p-4 bg-white shadow-md">
-                <img
-                    className="w-52 cursor-pointer"
-                    src={Logo} alt="Logo" />
+                {/* Envolvemos el logo en un Link para dirigir al inicio */}
+                <Link to="/">
+                    <img
+                        className="w-52 cursor-pointer"
+                        src={Logo} alt="Logo"
+                    />
+                </Link>
                 <nav className="flex flex-1 justify-center">
                     <ul className="flex space-x-8 text-gray-800">
                         <li className="flex items-center">
@@ -37,8 +41,8 @@ const Header = ({ onServiciosClick }) => {
                         <li className="flex items-center">
                             <Link
                                 className="flex items-center no-underline text-lg font-medium hover:text-blue-500"
-                                to="/contacto">
-                                <FaEnvelope className="mr-2" /> Contacto
+                                to={"/nutricion"}>
+                                <FaAppleAlt className="mr-2" /> Nutrición
                             </Link>
                         </li>
                     </ul>

@@ -10,6 +10,7 @@ import SectionSlider from "./components/SectionSlider";
 import Sensores from './components/Sensores';
 import Footer from "./components/footer";  // Importa el componente Footer
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import Nutricion from './components/Nutricion'; // Importa el componente de Nutrición
 
 function App() {
   const location = useLocation();
@@ -45,9 +46,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/nutricion" element={<Nutricion />} /> {/* Nueva ruta para Nutrición */}
         </Routes>
       </div>
-      <Footer />  {/* Agrega el Footer al final */}
+      <Footer />
     </div>
   );
 }
