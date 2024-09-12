@@ -7,6 +7,7 @@ import Nosotros from "./components/Nosotros";
 import Login from "./components/login";
 import Register from "./components/register";
 import SectionSlider from "./components/SectionSlider";
+import Footer from "./components/footer";  // Importa el componente Footer
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
 function App() {
@@ -24,11 +25,11 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col min-h-screen">
       {location.pathname !== '/login' && location.pathname !== '/register' && (
         <Header onServiciosClick={handleScrollToSlider} />
       )}
-      <div>
+      <div className="flex-grow">
         <Routes>
           <Route path="/" element={
             <>
@@ -44,6 +45,7 @@ function App() {
           <Route path="/nosotros" element={<Nosotros />} />
         </Routes>
       </div>
+      <Footer />  {/* Agrega el Footer al final */}
     </div>
   );
 }
