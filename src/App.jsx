@@ -10,11 +10,7 @@ import SectionSlider from "./components/SectionSlider";
 import Sensores from './components/Sensores';
 import Footer from "./components/footer";  // Importa el componente Footer
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
 import { AuthProvider } from "./context/AuthContext";  // Importa el AuthProvider
-=======
-import Nutricion from './components/Nutricion'; // Importa el componente de Nutrición
->>>>>>> e70829a14be2058bd2c6f3f4c677ac33bc412ef4
 
 function App() {
   const location = useLocation();
@@ -31,7 +27,6 @@ function App() {
   };
 
   return (
-<<<<<<< HEAD
     <AuthProvider>
       <div className="flex flex-col min-h-screen">
         {location.pathname !== '/login' && location.pathname !== '/register' && (
@@ -57,32 +52,6 @@ function App() {
         <Footer />  {/* Agrega el Footer al final */}
       </div>
     </AuthProvider>
-=======
-    <div className="flex flex-col min-h-screen">
-      {location.pathname !== '/login' && location.pathname !== '/register' && (
-        <Header onServiciosClick={handleScrollToSlider} />
-      )}
-      <div className="flex-grow">
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <div ref={sectionSliderRef}>
-                <SectionSlider />
-              </div>
-            </>
-          } />
-          <Route path="/planes" element={<PricingPlans />} />
-          <Route path="/sensores" element={<Sensores />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/nutricion" element={<Nutricion />} /> {/* Nueva ruta para Nutrición */}
-        </Routes>
-      </div>
-      <Footer />
-    </div>
->>>>>>> e70829a14be2058bd2c6f3f4c677ac33bc412ef4
   );
 }
 
