@@ -16,7 +16,7 @@ function Nosotros() {
     <div className="flex flex-col items-center justify-center min-h-screen p-6 text-center">
       <img src={equipoImg} alt="Equipo" className="w-full max-w-xs md:max-w-md rounded-lg mb-6" />
       <h2 className="text-2xl font-bold mb-4">¿Quiénes somos?</h2>
-      <ul className="list-none space-y-2">
+      <ul className="list-none flex flex-wrap justify-center space-x-6">
         {integrantes.map((integrante, index) => (
           <li key={index} className="text-lg font-semibold text-gray-700 flex items-center">
             <FaGithub className="mr-2 text-gray-500" />
