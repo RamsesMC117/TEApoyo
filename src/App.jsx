@@ -7,6 +7,7 @@ import Nosotros from "./components/Nosotros";
 import Login from "./components/login";
 import Register from "./components/register";
 import SectionSlider from "./components/SectionSlider";
+import Sensores from './components/Sensores';
 import Footer from "./components/footer";  // Importa el componente Footer
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
@@ -40,6 +41,7 @@ function App() {
             </>
           } />
           <Route path="/planes" element={<PricingPlans />} />
+          <Route path="/sensores" element={<Sensores />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/nosotros" element={<Nosotros />} />
