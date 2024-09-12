@@ -10,6 +10,7 @@ import SectionSlider from "./components/SectionSlider";
 import Sensores from './components/Sensores';
 import Footer from "./components/footer";  // Importa el componente Footer
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { AuthProvider } from "./context/AuthContext";  // Importa el AuthProvider
 
 function App() {
   const location = useLocation();
@@ -26,29 +27,31 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {location.pathname !== '/login' && location.pathname !== '/register' && (
-        <Header onServiciosClick={handleScrollToSlider} />
-      )}
-      <div className="flex-grow">
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <div ref={sectionSliderRef}>
-                <SectionSlider />
-              </div>
-            </>
-          } />
-          <Route path="/planes" element={<PricingPlans />} />
-          <Route path="/sensores" element={<Sensores />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/nosotros" element={<Nosotros />} />
-        </Routes>
+    <AuthProvider>
+      <div className="flex flex-col min-h-screen">
+        {location.pathname !== '/login' && location.pathname !== '/register' && (
+          <Header onServiciosClick={handleScrollToSlider} />
+        )}
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Hero />
+                <div ref={sectionSliderRef}>
+                  <SectionSlider />
+                </div>
+              </>
+            } />
+            <Route path="/planes" element={<PricingPlans />} />
+            <Route path="/sensores" element={<Sensores />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/nosotros" element={<Nosotros />} />
+          </Routes>
+        </div>
+        <Footer />  {/* Agrega el Footer al final */}
       </div>
-      <Footer />  {/* Agrega el Footer al final */}
-    </div>
+    </AuthProvider>
   );
 }
 
