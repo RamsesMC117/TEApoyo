@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Gif from '../assets/auto.gif';
+import Gif from '../assets/gifAutismo.gif';
 
 export default function Hero() {
     const [isMission, setIsMission] = useState(true); // Estado para alternar entre misión y visión
