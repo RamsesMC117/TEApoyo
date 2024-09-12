@@ -8,6 +8,7 @@ import Login from "./components/login";
 import Register from "./components/register";
 import SectionSlider from "./components/SectionSlider";
 import Sensores from './components/Sensores';
+import Nutricion from './components/Nutricion';
 import Footer from "./components/footer";  // Importa el componente Footer
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { AuthProvider } from "./context/AuthContext";  // Importa el AuthProvider
@@ -47,6 +48,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/nosotros" element={<Nosotros />} />
+            <Route path="/nutricion" element={<Nutricion />} />
           </Routes>
         </div>
         <Footer />  {/* Agrega el Footer al final */}

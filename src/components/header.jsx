@@ -1,7 +1,7 @@
 // src/components/Header.jsx
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo-definitivo-removebg-preview.png";
-import { FaHome, FaInfoCircle, FaServicestack } from "react-icons/fa";
+import { FaAppleAlt, FaHome, FaInfoCircle, FaServicestack } from "react-icons/fa";
 import { AiOutlineLogin } from "react-icons/ai";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
@@ -41,6 +41,14 @@ const Header = ({ onServiciosClick }) => {
                                 onClick={onServiciosClick}>
                                 <FaServicestack className="mr-2" /> Servicios
                             </button>
+                        </li>
+                        <li className="flex items-center">
+                            <Link to="/nutricion">
+                                <button
+                                    className="flex items-center no-underline text-lg font-medium hover:text-blue-500">
+                                    <FaAppleAlt className="mr-2" /> Nutricion
+                                </button>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
