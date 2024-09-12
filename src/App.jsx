@@ -1,16 +1,22 @@
 import Header from "./components/header";
 import Hero from "./components/hero";
 import PricingPlans from "./components/PricingPlans";
-import { Routes, Route } from 'react-router-dom';
+import Login from "./components/login";
+import Register from "./components/register";
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 function App() {
+  const location = useLocation();
+
   return (
     <div className="flex flex-col">
-      <Header />
+      {location.pathname !== '/login' && location.pathname !== '/register' && <Header />}
       <div>
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/planes" element={<PricingPlans />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
     </div>

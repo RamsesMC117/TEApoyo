@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Gif from '../assets/gifAutismo.gif';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
     const [isMission, setIsMission] = useState(true); // Estado para alternar entre misión y visión
@@ -40,9 +41,11 @@ export default function Hero() {
                             </div>
                             {/* Botón de comenzar */}
                             <div className="mt-8 flex justify-start">
-                                <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                                    Comenzar
-                                </button>
+                                <Link to="/login">
+                                    <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                                        Comenzar
+                                    </button>
+                                </Link>
                             </div>
                         </div>
 
