@@ -1,6 +1,7 @@
 import Header from "./components/header";
 import Hero from "./components/hero";
 import PricingPlans from "./components/PricingPlans";
+import Nosotros from "./components/Nosotros";
 import Login from "./components/login";
 import Register from "./components/register";
 import { Routes, Route, useLocation } from 'react-router-dom';
@@ -17,6 +18,7 @@ function App() {
           <Route path="/planes" element={<PricingPlans />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/nosotros" element={<Nosotros />} />
         </Routes>
       </div>
     </div>
