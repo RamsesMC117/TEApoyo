@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from "../assets/se11.png";
+import Logo from "../assets/proto.png";
 import SensorImage from "../assets/sensor.png"; // Asegúrate de tener esta imagen en tu carpeta de assets
 import AnotherImage from "../assets/micro.png"; // Asegúrate de tener esta imagen en tu carpeta de assets
 import FinalImage from "../assets/rasb.png"; // Asegúrate de tener esta imagen en tu carpeta de assets
@@ -25,9 +25,9 @@ const SectionSlider = () => {
                     </div>
 
                     {/* Imagen en el lado derecho */}
-                    <div className="md:w-1/2">
+                    <div className="md:w-1/3">
                         <img
-                            className="w-full h-auto object-cover"
+                            className="w-96 h-auto object-cover"
                             src={Logo}
                             alt="Imagen de servicios"
                         />
