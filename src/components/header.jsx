@@ -5,7 +5,7 @@ import { AiOutlineLogin } from "react-icons/ai";
 
 const Header = () => {
     return (
-        <div className="h-screen w-full bg-gray-100">
+        <div className="h-full w-full bg-gray-100">
             <div className="flex flex-row items-center justify-between p-4 bg-white shadow-md">
                 <img
                     className="w-52 cursor-pointer"
